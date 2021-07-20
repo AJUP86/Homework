@@ -1,0 +1,61 @@
+*** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ PASS  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+ FAIL  alejandrourroz-w4/1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+  ● sanitizeFruitBasket › should take two parameters
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      33 |   test('should take two parameters', () => {
+      34 |     // TODO replace next line with your code
+    > 35 |     expect(false).toBe(true);
+         |                   ^
+      36 |   });
+      37 | 
+      38 |   test('should not modify the original `fruitBasket` array', () => {
+
+      at Object.<anonymous> (alejandrourroz-w4/1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:35:19)
+
+  ● sanitizeFruitBasket › should not modify the original `fruitBasket` array
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      40 |     const originalFruitBasketContents = [...fruitBasket];
+      41 |     // TODO replace next line with your code
+    > 42 |     expect(false).toBe(true);
+         |                   ^
+      43 |   });
+      44 | 
+      45 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+
+      at Object.<anonymous> (alejandrourroz-w4/1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:42:19)
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      45 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+      46 |     // TODO replace next line with your code
+    > 47 |     expect(false).toBe(true);
+         |                   ^
+      48 |   });
+      49 | });
+      50 | 
+
+      at Object.<anonymous> (alejandrourroz-w4/1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:47:19)
+
+Test Suites: 1 failed, 1 passed, 2 total
+Tests:       3 failed, 3 passed, 6 total
+Snapshots:   0 total
+Time:        2.393 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
