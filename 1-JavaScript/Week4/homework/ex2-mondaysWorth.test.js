@@ -32,7 +32,7 @@ const hourlyRate = 25;
 function computeEarnings(task, rates) { 
   const inHours = task.map(task => task.duration / 60 * rates);
   const earnings = inHours.reduce((a,b) => a + b, 0); 
-  return `€${earnings}`;
+  return `€${earnings}0`;
 }
 
 // ! Unit tests (using Jest)
