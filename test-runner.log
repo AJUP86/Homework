@@ -650,3 +650,36 @@ Snapshots:   0 total
 Time:        1.463 s
 Ran all test suites matching /ex4-observable.test.js/i.
 
+2021-07-21 11:51:35 info: --------------------------------------
+2021-07-21 11:51:35 info: >>> Running Unit Test `ex5-wallet` <<<
+2021-07-21 11:51:35 info: --------------------------------------
+2021-07-21 11:51:42 error: *** Unit Test Error Report ***
+
+- wallet q1: At line 26, which variables are in the scope marked Closure?
+- wallet q2: What is in the Call Stack, from top to bottom?
+- wallet q3: What tooltip appears when hovering over the third debug button?
+- wallet q4: What is displayed in the console?
+- wallet q5: The owner of the wallet with insufficient funds is:
+
+2021-07-21 11:55:07 info: --------------------------------------
+2021-07-21 11:55:07 info: >>> Running Unit Test `ex5-wallet` <<<
+2021-07-21 11:55:07 info: --------------------------------------
+2021-07-21 11:55:11 error: *** Unit Test Error Report ***
+
+- wallet q1: At line 26, which variables are in the scope marked Closure?
+- wallet q2: What is in the Call Stack, from top to bottom?
+- wallet q3: What tooltip appears when hovering over the third debug button?
+- wallet q4: What is displayed in the console?
+- wallet q5: The owner of the wallet with insufficient funds is:
+
+2021-07-22 12:02:03 info: --------------------------------------
+2021-07-22 12:02:03 info: >>> Running Unit Test `ex5-wallet` <<<
+2021-07-22 12:02:03 info: --------------------------------------
+2021-07-22 12:02:05 error: *** Unit Test Error Report ***
+
+- wallet q1: At line 26, which variables are in the scope marked Closure?
+- wallet q2: What is in the Call Stack, from top to bottom?
+- wallet q3: What tooltip appears when hovering over the third debug button?
+- wallet q4: What is displayed in the console?
+- wallet q5: The owner of the wallet with insufficient funds is:
+
