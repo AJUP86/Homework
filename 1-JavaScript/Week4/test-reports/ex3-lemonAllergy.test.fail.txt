@@ -1,7 +1,6 @@
 *** Unit Test Error Report ***
 
 Command failed: npx jest ex3-lemonAllergy.test.js --colors
- PASS  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
  FAIL  alejandrourroz-w4/1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
   ● sanitizeFruitBasket › should take two parameters
 
@@ -54,8 +53,10 @@ Command failed: npx jest ex3-lemonAllergy.test.js --colors
 
       at Object.<anonymous> (alejandrourroz-w4/1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:47:19)
 
+ PASS  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+
 Test Suites: 1 failed, 1 passed, 2 total
 Tests:       3 failed, 3 passed, 6 total
 Snapshots:   0 total
-Time:        2.393 s
+Time:        3.262 s
 Ran all test suites matching /ex3-lemonAllergy.test.js/i.

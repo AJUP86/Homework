@@ -438,3 +438,215 @@ Snapshots:   0 total
 Time:        2.393 s
 Ran all test suites matching /ex3-lemonAllergy.test.js/i.
 
+2021-07-21 10:04:21 info: -------------------------------------------------
+2021-07-21 10:04:21 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2021-07-21 10:04:21 info: -------------------------------------------------
+2021-07-21 10:04:28 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  alejandrourroz-w4/1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+  ● sanitizeFruitBasket › should take two parameters
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      33 |   test('should take two parameters', () => {
+      34 |     // TODO replace next line with your code
+    > 35 |     expect(false).toBe(true);
+         |                   ^
+      36 |   });
+      37 | 
+      38 |   test('should not modify the original `fruitBasket` array', () => {
+
+      at Object.<anonymous> (alejandrourroz-w4/1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:35:19)
+
+  ● sanitizeFruitBasket › should not modify the original `fruitBasket` array
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      40 |     const originalFruitBasketContents = [...fruitBasket];
+      41 |     // TODO replace next line with your code
+    > 42 |     expect(false).toBe(true);
+         |                   ^
+      43 |   });
+      44 | 
+      45 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+
+      at Object.<anonymous> (alejandrourroz-w4/1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:42:19)
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      45 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+      46 |     // TODO replace next line with your code
+    > 47 |     expect(false).toBe(true);
+         |                   ^
+      48 |   });
+      49 | });
+      50 | 
+
+      at Object.<anonymous> (alejandrourroz-w4/1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:47:19)
+
+ PASS  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+
+Test Suites: 1 failed, 1 passed, 2 total
+Tests:       3 failed, 3 passed, 6 total
+Snapshots:   0 total
+Time:        3.262 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+
+2021-07-21 10:04:48 info: ------------------------------------------------------
+2021-07-21 10:04:48 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2021-07-21 10:04:48 info: ------------------------------------------------------
+2021-07-21 10:04:51 info: All unit tests passed.
+2021-07-21 10:04:53 info: All steps were completed successfully
+2021-07-21 10:05:24 info: ------------------------------------------
+2021-07-21 10:05:24 info: >>> Running Unit Test `ex4-observable` <<<
+2021-07-21 10:05:24 info: ------------------------------------------
+2021-07-21 10:05:28 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-observable.test.js --colors
+ PASS  1-JavaScript/Week4/homework/ex4-observable/ex4-observable.test.js
+ FAIL  alejandrourroz-w4/1-JavaScript/Week4/homework/ex4-observable/ex4-observable.test.js
+  ● createObservable › should notify all subscribers of any notification
+
+    expect(jest.fn()).toHaveBeenCalledWith(...expected)
+
+    Expected: "Hi!"
+
+    Number of calls: 0
+
+      28 | 
+      29 |     // Assert that both listeners have been called with the Hi! message
+    > 30 |     expect(listener1).toHaveBeenCalledWith('Hi!');
+         |                       ^
+      31 |     expect(listener2).toHaveBeenCalledWith('Hi!');
+      32 |   });
+      33 | });
+
+      at Object.<anonymous> (alejandrourroz-w4/1-JavaScript/Week4/homework/ex4-observable/ex4-observable.test.js:30:23)
+
+Test Suites: 1 failed, 1 passed, 2 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        2.79 s
+Ran all test suites matching /ex4-observable.test.js/i.
+
+2021-07-21 10:19:55 info: ------------------------------------------
+2021-07-21 10:19:55 info: >>> Running Unit Test `ex4-observable` <<<
+2021-07-21 10:19:55 info: ------------------------------------------
+2021-07-21 10:19:58 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-observable.test.js --colors
+ PASS  1-JavaScript/Week4/homework/ex4-observable/ex4-observable.test.js
+ FAIL  alejandrourroz-w4/1-JavaScript/Week4/homework/ex4-observable/ex4-observable.test.js
+  ● createObservable › should notify all subscribers of any notification
+
+    expect(jest.fn()).toHaveBeenCalledWith(...expected)
+
+    Expected: "Hi!"
+
+    Number of calls: 0
+
+      28 | 
+      29 |     // Assert that both listeners have been called with the Hi! message
+    > 30 |     expect(listener1).toHaveBeenCalledWith('Hi!');
+         |                       ^
+      31 |     expect(listener2).toHaveBeenCalledWith('Hi!');
+      32 |   });
+      33 | });
+
+      at Object.<anonymous> (alejandrourroz-w4/1-JavaScript/Week4/homework/ex4-observable/ex4-observable.test.js:30:23)
+
+Test Suites: 1 failed, 1 passed, 2 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        2.136 s
+Ran all test suites matching /ex4-observable.test.js/i.
+
+2021-07-21 10:32:57 info: ------------------------------------------
+2021-07-21 10:32:57 info: >>> Running Unit Test `ex4-observable` <<<
+2021-07-21 10:32:57 info: ------------------------------------------
+2021-07-21 10:33:01 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-observable.test.js --colors
+ FAIL  alejandrourroz-w4/1-JavaScript/Week4/homework/ex4-observable/ex4-observable.test.js
+  ● createObservable › should notify all subscribers of any notification
+
+    expect(jest.fn()).toHaveBeenCalledWith(...expected)
+
+    Expected: "Hi!"
+
+    Number of calls: 0
+
+      28 | 
+      29 |     // Assert that both listeners have been called with the Hi! message
+    > 30 |     expect(listener1).toHaveBeenCalledWith('Hi!');
+         |                       ^
+      31 |     expect(listener2).toHaveBeenCalledWith('Hi!');
+      32 |   });
+      33 | });
+
+      at Object.<anonymous> (alejandrourroz-w4/1-JavaScript/Week4/homework/ex4-observable/ex4-observable.test.js:30:23)
+
+ PASS  1-JavaScript/Week4/homework/ex4-observable/ex4-observable.test.js
+
+Test Suites: 1 failed, 1 passed, 2 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        1.447 s
+Ran all test suites matching /ex4-observable.test.js/i.
+
+2021-07-21 10:33:01 error: *** ESLint Report ***
+
+ex4-observable/main.js
+   4:1  warning  Remove commented-out code  hyf/no-commented-out-code
+  12:1  warning  Remove commented-out code  hyf/no-commented-out-code
+  24:1  warning  Remove commented-out code  hyf/no-commented-out-code
+  30:1  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 4 problems (0 errors, 4 warnings)
+
+
+2021-07-21 10:34:08 info: ------------------------------------------
+2021-07-21 10:34:08 info: >>> Running Unit Test `ex4-observable` <<<
+2021-07-21 10:34:08 info: ------------------------------------------
+2021-07-21 10:34:10 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-observable.test.js --colors
+ FAIL  alejandrourroz-w4/1-JavaScript/Week4/homework/ex4-observable/ex4-observable.test.js
+  ● createObservable › should notify all subscribers of any notification
+
+    expect(jest.fn()).toHaveBeenCalledWith(...expected)
+
+    Expected: "Hi!"
+
+    Number of calls: 0
+
+      28 | 
+      29 |     // Assert that both listeners have been called with the Hi! message
+    > 30 |     expect(listener1).toHaveBeenCalledWith('Hi!');
+         |                       ^
+      31 |     expect(listener2).toHaveBeenCalledWith('Hi!');
+      32 |   });
+      33 | });
+
+      at Object.<anonymous> (alejandrourroz-w4/1-JavaScript/Week4/homework/ex4-observable/ex4-observable.test.js:30:23)
+
+ PASS  1-JavaScript/Week4/homework/ex4-observable/ex4-observable.test.js
+
+Test Suites: 1 failed, 1 passed, 2 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        1.463 s
+Ran all test suites matching /ex4-observable.test.js/i.
+
