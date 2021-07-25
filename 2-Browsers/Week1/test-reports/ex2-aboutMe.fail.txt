@@ -1,0 +1,7 @@
+*** Unit Test Error Report ***
+
+jest-haste-map: Haste module naming collision: javascript
+  The following files share their name; please adjust your hasteImpl:
+    * <rootDir>/package.json
+    * <rootDir>/alejandrourroz-w4/package.json
+

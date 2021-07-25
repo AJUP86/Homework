@@ -683,3 +683,14 @@ Ran all test suites matching /ex4-observable.test.js/i.
 - wallet q4: What is displayed in the console?
 - wallet q5: The owner of the wallet with insufficient funds is:
 
+2021-07-26 01:13:37 info: ---------------------------------------
+2021-07-26 01:13:37 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2021-07-26 01:13:37 info: ---------------------------------------
+2021-07-26 01:13:49 error: *** Unit Test Error Report ***
+
+jest-haste-map: Haste module naming collision: javascript
+  The following files share their name; please adjust your hasteImpl:
+    * <rootDir>/package.json
+    * <rootDir>/alejandrourroz-w4/package.json
+
+
