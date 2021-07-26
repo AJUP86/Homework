@@ -193,3 +193,66 @@ Snapshots:   0 total
 Time:        7.982 s
 Ran all test suites matching /ex2-aboutMe.test.js/i.
 
+2021-07-26 08:53:37 info: ---------------------------------------
+2021-07-26 08:53:37 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2021-07-26 08:53:37 info: ---------------------------------------
+2021-07-26 08:53:49 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-aboutMe.test.js --colors
+ PASS  2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js (5.176 s)
+ FAIL  alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js (5.219 s)
+  ● Generated HTML › - the body font-family should be `Arial, sans-serif`
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: StringContaining "Arial"
+    Received: ""
+
+      15 |   test('- the body font-family should be `Arial, sans-serif`', () => {
+      16 |     const fontFamily = document.body.style.fontFamily;
+    > 17 |     expect(fontFamily).toEqual(expect.stringContaining('Arial'));
+         |                        ^
+      18 |     expect(fontFamily).toEqual(expect.stringContaining('sans-serif'));
+      19 |   });
+      20 | 
+
+      at Object.<anonymous> (alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js:17:24)
+
+  ● Generated HTML › - each <li> should have the CSS class `list-item`
+
+    expect(received).toBeTruthy()
+
+    Received: false
+
+      22 |     const nodeList = document.querySelectorAll('li');
+      23 |     const classNames = [...nodeList].map((node) => node.className);
+    > 24 |     expect(classNames.every((name) => name === 'list-item')).toBeTruthy();
+         |                                                              ^
+      25 |   });
+      26 | 
+      27 |   test('- each <li> should rendered red', () => {
+
+      at Object.<anonymous> (alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js:24:62)
+
+  ● Generated HTML › - each <li> should rendered red
+
+    expect(received).toBeTruthy()
+
+    Received: false
+
+      30 |       (node) => window.getComputedStyle(node).color
+      31 |     );
+    > 32 |     expect(colors.every((color) => color === 'red')).toBeTruthy();
+         |                                                      ^
+      33 |   });
+      34 | });
+      35 | 
+
+      at Object.<anonymous> (alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js:32:54)
+
+Test Suites: 1 failed, 1 passed, 2 total
+Tests:       3 failed, 5 passed, 8 total
+Snapshots:   0 total
+Time:        8.143 s
+Ran all test suites matching /ex2-aboutMe.test.js/i.
+

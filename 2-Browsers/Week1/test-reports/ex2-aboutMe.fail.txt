@@ -1,8 +1,8 @@
 *** Unit Test Error Report ***
 
 Command failed: npx jest ex2-aboutMe.test.js --colors
- PASS  2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js
- FAIL  alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js
+ PASS  2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js (5.176 s)
+ FAIL  alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js (5.219 s)
   ● Generated HTML › - the body font-family should be `Arial, sans-serif`
 
     expect(received).toEqual(expected) // deep equality
@@ -55,5 +55,5 @@ Command failed: npx jest ex2-aboutMe.test.js --colors
 Test Suites: 1 failed, 1 passed, 2 total
 Tests:       3 failed, 5 passed, 8 total
 Snapshots:   0 total
-Time:        7.982 s
+Time:        8.143 s
 Ran all test suites matching /ex2-aboutMe.test.js/i.
