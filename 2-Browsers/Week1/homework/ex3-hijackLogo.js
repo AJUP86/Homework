@@ -6,7 +6,9 @@
    HackYourFuture logo instead.
 ------------------------------------------------------------------------------*/
 function hijackGoogleLogo() {
-  // TODO your code goes in here
+   const img = document.getElementById('hplogo_new');
+   img.src = 'https://www.vectrix.nl/media/1948/hack-your-future.png?width=448';
+   img.srcset= 'https://www.vectrix.nl/media/1948/hack-your-future.png?width=448';
 }
 
 hijackGoogleLogo();

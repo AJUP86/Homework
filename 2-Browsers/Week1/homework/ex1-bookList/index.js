@@ -40,8 +40,10 @@ const myBooks = [
 ];
 
 function createBookList(books) {
-  // TODO your code goes in here, return the ul element
+  const list = books.filter(book => book.title );
+  console.log(list)
 }
+
 
 const ulElement = createBookList(myBooks);
 
