@@ -9,11 +9,10 @@
 ------------------------------------------------------------------------------*/
 
 // TODO add your JavaScript code here.
-document.querySelector('body').style.fontFamily = "Arial, sands-serif"
+document.querySelector('body').style.fontFamily = "Arial, sans-serif"
 document.getElementById('nickname').textContent = "Alex"
 document.getElementById('fav-food').textContent = "Hamburger"
 document.getElementById('hometown').textContent = "Managua"
 const getUl = document.querySelector('ul')
 const getLi = getUl.children
-const arrayLi = Array.from(getLi).forEach(element => console.log(element));
-arrayLi.className
+Array.from(getLi).forEach(element => element.className = 'list-item');
