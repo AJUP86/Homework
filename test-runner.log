@@ -302,3 +302,475 @@ Snapshots:   0 total
 Time:        4.446 s
 Ran all test suites matching /ex3-hijackLogo.test.js/i.
 
+2021-07-27 02:30:33 info: ----------------------------------------
+2021-07-27 02:30:33 info: >>> Running Unit Test `ex1-bookList` <<<
+2021-07-27 02:30:33 info: ----------------------------------------
+2021-07-27 02:30:44 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-bookList.test.js --colors
+ FAIL  alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex1-bookList.test.js (5.024 s)
+  ● Console
+
+    console.error
+      Error: Uncaught [TypeError: Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'.]
+          at reportException (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:62:24)
+          at processJavaScript (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:243:7)
+          at HTMLScriptElementImpl._innerEval (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:176:5)
+          at onLoadExternalScript (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:98:12)
+          at onLoadWrapped (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/per-document-resource-loader.js:53:33)
+          at Object.check (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:76:23)
+          at /Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:119:14
+          at processTicksAndRejections (internal/process/task_queues.js:95:5) TypeError: Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'.
+          at Object.<anonymous>.exports.convert (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/generated/Node.js:25:9)
+          at HTMLDivElement.appendChild (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/generated/Node.js:390:26)
+          at file:///Users/hackyourfuture/Desktop/Homework/alejandrourroz-w4/2-Browsers/Week1/homework/ex1-bookList/index.js:48:37
+          at Script.runInContext (vm.js:144:12)
+          at Object.runInContext (vm.js:295:6)
+          at processJavaScript (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:241:10)
+          at HTMLScriptElementImpl._innerEval (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:176:5)
+          at onLoadExternalScript (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:98:12)
+          at onLoadWrapped (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/per-document-resource-loader.js:53:33)
+          at Object.check (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:76:23)
+          at /Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:119:14
+          at processTicksAndRejections (internal/process/task_queues.js:95:5)
+
+      at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
+      at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:28)
+      at processJavaScript (node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:243:7)
+      at HTMLScriptElementImpl._innerEval (node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:176:5)
+      at onLoadExternalScript (node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:98:12)
+      at onLoadWrapped (node_modules/jsdom/lib/jsdom/browser/resources/per-document-resource-loader.js:53:33)
+      at Object.check (node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:76:23)
+
+  ● Generated HTML › should contain a <ul> that is a child of <div id="bookList">
+
+    expect(received).toBeTruthy()
+
+    Received: null
+
+      41 |   test('should contain a <ul> that is a child of <div id="bookList">', () => {
+      42 |     const ul = document.querySelector('div[id=bookList] > ul');
+    > 43 |     expect(ul).toBeTruthy();
+         |                ^
+      44 |   });
+      45 | 
+      46 |   test('should contain a <ul> with 3 <li> elements', () => {
+
+      at Object.<anonymous> (alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex1-bookList.test.js:43:16)
+
+  ● Generated HTML › should contain a <ul> with 3 <li> elements
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: 0
+
+      47 |     const nodeList = document.querySelectorAll('ul > li');
+      48 |     const result = nodeList ? nodeList.length : 0;
+    > 49 |     expect(result).toBe(3);
+         |                    ^
+      50 |   });
+      51 | 
+      52 |   test('should contain an <li> with title and author for each book of the `myBooks` array', () => {
+
+      at Object.<anonymous> (alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex1-bookList.test.js:49:20)
+
+  ● Generated HTML › should contain an <li> with title and author for each book of the `myBooks` array
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: StringContaining "The Design of Everyday Things"
+    Received: ""
+
+      58 |       : '';
+      59 |     state.titlesAndAuthors.forEach((string) =>
+    > 60 |       expect(result).toEqual(expect.stringContaining(string))
+         |                      ^
+      61 |     );
+      62 |   });
+      63 | 
+
+      at forEach (alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex1-bookList.test.js:60:22)
+          at Array.forEach (<anonymous>)
+      at Object.<anonymous> (alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex1-bookList.test.js:59:28)
+
+  ● Generated HTML › should contain an <img> element for each book
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: 0
+
+      65 |     const nodeList = document.querySelectorAll('li img');
+      66 |     const result = nodeList ? nodeList.length : 0;
+    > 67 |     expect(result).toBe(3);
+         |                    ^
+      68 |   });
+      69 | });
+      70 | 
+
+      at Object.<anonymous> (alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex1-bookList.test.js:67:20)
+
+ FAIL  2-Browsers/Week1/unit-tests/ex1-bookList.test.js (5.038 s)
+  ● Console
+
+    console.error
+      Error: Uncaught [TypeError: Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'.]
+          at reportException (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:62:24)
+          at processJavaScript (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:243:7)
+          at HTMLScriptElementImpl._innerEval (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:176:5)
+          at onLoadExternalScript (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:98:12)
+          at onLoadWrapped (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/per-document-resource-loader.js:53:33)
+          at Object.check (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:76:23)
+          at /Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:119:14
+          at processTicksAndRejections (internal/process/task_queues.js:95:5) TypeError: Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'.
+          at Object.<anonymous>.exports.convert (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/generated/Node.js:25:9)
+          at HTMLDivElement.appendChild (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/generated/Node.js:390:26)
+          at file:///Users/hackyourfuture/Desktop/Homework/2-Browsers/Week1/homework/ex1-bookList/index.js:69:37
+          at Script.runInContext (vm.js:144:12)
+          at Object.runInContext (vm.js:295:6)
+          at processJavaScript (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:241:10)
+          at HTMLScriptElementImpl._innerEval (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:176:5)
+          at onLoadExternalScript (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:98:12)
+          at onLoadWrapped (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/per-document-resource-loader.js:53:33)
+          at Object.check (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:76:23)
+          at /Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:119:14
+          at processTicksAndRejections (internal/process/task_queues.js:95:5)
+
+      at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
+      at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:28)
+      at processJavaScript (node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:243:7)
+      at HTMLScriptElementImpl._innerEval (node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:176:5)
+      at onLoadExternalScript (node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:98:12)
+      at onLoadWrapped (node_modules/jsdom/lib/jsdom/browser/resources/per-document-resource-loader.js:53:33)
+      at Object.check (node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:76:23)
+
+  ● Generated HTML › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      10:64   error  <img> is missing required \"alt\" attribute  wcag/h37
+      10:206  error  <img> is missing required \"alt\" attribute  wcag/h37
+      10:344  error  <img> is missing required \"alt\" attribute  wcag/h37
+    
+    ✖ 3 problems (3 errors, 0 warnings)
+    "
+
+      40 |   const report = htmlValidate.validateString(htmlText);
+      41 |   const validationReport = stylish(report);
+    > 42 |   expect(validationReport).toBe('');
+         |                            ^
+      43 | }
+      44 | 
+      45 | module.exports = {
+
+      at validateHTML (test-runner/jsdom-helpers.js:42:28)
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex1-bookList.test.js:39:5)
+
+Test Suites: 2 failed, 2 total
+Tests:       5 failed, 5 passed, 10 total
+Snapshots:   0 total
+Time:        7.822 s
+Ran all test suites matching /ex1-bookList.test.js/i.
+
+2021-07-27 02:42:22 info: ----------------------------------------
+2021-07-27 02:42:22 info: >>> Running Unit Test `ex1-bookList` <<<
+2021-07-27 02:42:22 info: ----------------------------------------
+2021-07-27 02:42:33 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-bookList.test.js --colors
+ PASS  2-Browsers/Week1/unit-tests/ex1-bookList.test.js
+  ● Console
+
+    console.error
+      Error: Uncaught [TypeError: Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'.]
+          at reportException (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:62:24)
+          at processJavaScript (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:243:7)
+          at HTMLScriptElementImpl._innerEval (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:176:5)
+          at onLoadExternalScript (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:98:12)
+          at onLoadWrapped (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/per-document-resource-loader.js:53:33)
+          at Object.check (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:76:23)
+          at /Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:119:14
+          at processTicksAndRejections (internal/process/task_queues.js:95:5) TypeError: Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'.
+          at Object.<anonymous>.exports.convert (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/generated/Node.js:25:9)
+          at HTMLDivElement.appendChild (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/generated/Node.js:390:26)
+          at file:///Users/hackyourfuture/Desktop/Homework/2-Browsers/Week1/homework/ex1-bookList/index.js:70:37
+          at Script.runInContext (vm.js:144:12)
+          at Object.runInContext (vm.js:295:6)
+          at processJavaScript (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:241:10)
+          at HTMLScriptElementImpl._innerEval (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:176:5)
+          at onLoadExternalScript (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:98:12)
+          at onLoadWrapped (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/per-document-resource-loader.js:53:33)
+          at Object.check (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:76:23)
+          at /Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:119:14
+          at processTicksAndRejections (internal/process/task_queues.js:95:5)
+
+      at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
+      at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:28)
+      at processJavaScript (node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:243:7)
+      at HTMLScriptElementImpl._innerEval (node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:176:5)
+      at onLoadExternalScript (node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:98:12)
+      at onLoadWrapped (node_modules/jsdom/lib/jsdom/browser/resources/per-document-resource-loader.js:53:33)
+      at Object.check (node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:76:23)
+
+ FAIL  alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex1-bookList.test.js
+  ● Console
+
+    console.error
+      Error: Uncaught [TypeError: Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'.]
+          at reportException (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:62:24)
+          at processJavaScript (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:243:7)
+          at HTMLScriptElementImpl._innerEval (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:176:5)
+          at onLoadExternalScript (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:98:12)
+          at onLoadWrapped (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/per-document-resource-loader.js:53:33)
+          at Object.check (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:76:23)
+          at /Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:119:14
+          at processTicksAndRejections (internal/process/task_queues.js:95:5) TypeError: Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'.
+          at Object.<anonymous>.exports.convert (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/generated/Node.js:25:9)
+          at HTMLDivElement.appendChild (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/generated/Node.js:390:26)
+          at file:///Users/hackyourfuture/Desktop/Homework/alejandrourroz-w4/2-Browsers/Week1/homework/ex1-bookList/index.js:48:37
+          at Script.runInContext (vm.js:144:12)
+          at Object.runInContext (vm.js:295:6)
+          at processJavaScript (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:241:10)
+          at HTMLScriptElementImpl._innerEval (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:176:5)
+          at onLoadExternalScript (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:98:12)
+          at onLoadWrapped (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/per-document-resource-loader.js:53:33)
+          at Object.check (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:76:23)
+          at /Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:119:14
+          at processTicksAndRejections (internal/process/task_queues.js:95:5)
+
+      at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
+      at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:28)
+      at processJavaScript (node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:243:7)
+      at HTMLScriptElementImpl._innerEval (node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:176:5)
+      at onLoadExternalScript (node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:98:12)
+      at onLoadWrapped (node_modules/jsdom/lib/jsdom/browser/resources/per-document-resource-loader.js:53:33)
+      at Object.check (node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:76:23)
+
+  ● Generated HTML › should contain a <ul> that is a child of <div id="bookList">
+
+    expect(received).toBeTruthy()
+
+    Received: null
+
+      41 |   test('should contain a <ul> that is a child of <div id="bookList">', () => {
+      42 |     const ul = document.querySelector('div[id=bookList] > ul');
+    > 43 |     expect(ul).toBeTruthy();
+         |                ^
+      44 |   });
+      45 | 
+      46 |   test('should contain a <ul> with 3 <li> elements', () => {
+
+      at Object.<anonymous> (alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex1-bookList.test.js:43:16)
+
+  ● Generated HTML › should contain a <ul> with 3 <li> elements
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: 0
+
+      47 |     const nodeList = document.querySelectorAll('ul > li');
+      48 |     const result = nodeList ? nodeList.length : 0;
+    > 49 |     expect(result).toBe(3);
+         |                    ^
+      50 |   });
+      51 | 
+      52 |   test('should contain an <li> with title and author for each book of the `myBooks` array', () => {
+
+      at Object.<anonymous> (alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex1-bookList.test.js:49:20)
+
+  ● Generated HTML › should contain an <li> with title and author for each book of the `myBooks` array
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: StringContaining "The Design of Everyday Things"
+    Received: ""
+
+      58 |       : '';
+      59 |     state.titlesAndAuthors.forEach((string) =>
+    > 60 |       expect(result).toEqual(expect.stringContaining(string))
+         |                      ^
+      61 |     );
+      62 |   });
+      63 | 
+
+      at forEach (alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex1-bookList.test.js:60:22)
+          at Array.forEach (<anonymous>)
+      at Object.<anonymous> (alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex1-bookList.test.js:59:28)
+
+  ● Generated HTML › should contain an <img> element for each book
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: 0
+
+      65 |     const nodeList = document.querySelectorAll('li img');
+      66 |     const result = nodeList ? nodeList.length : 0;
+    > 67 |     expect(result).toBe(3);
+         |                    ^
+      68 |   });
+      69 | });
+      70 | 
+
+      at Object.<anonymous> (alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex1-bookList.test.js:67:20)
+
+Test Suites: 1 failed, 1 passed, 2 total
+Tests:       4 failed, 6 passed, 10 total
+Snapshots:   0 total
+Time:        7.684 s
+Ran all test suites matching /ex1-bookList.test.js/i.
+
+2021-07-27 02:54:21 info: ----------------------------------------
+2021-07-27 02:54:21 info: >>> Running Unit Test `ex1-bookList` <<<
+2021-07-27 02:54:21 info: ----------------------------------------
+2021-07-27 02:54:34 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-bookList.test.js --colors
+ PASS  2-Browsers/Week1/unit-tests/ex1-bookList.test.js (7.196 s)
+  ● Console
+
+    console.error
+      Error: Uncaught [TypeError: Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'.]
+          at reportException (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:62:24)
+          at processJavaScript (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:243:7)
+          at HTMLScriptElementImpl._innerEval (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:176:5)
+          at onLoadExternalScript (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:98:12)
+          at onLoadWrapped (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/per-document-resource-loader.js:53:33)
+          at Object.check (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:76:23)
+          at /Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:119:14
+          at processTicksAndRejections (internal/process/task_queues.js:95:5) TypeError: Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'.
+          at Object.<anonymous>.exports.convert (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/generated/Node.js:25:9)
+          at HTMLDivElement.appendChild (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/generated/Node.js:390:26)
+          at file:///Users/hackyourfuture/Desktop/Homework/2-Browsers/Week1/homework/ex1-bookList/index.js:70:37
+          at Script.runInContext (vm.js:144:12)
+          at Object.runInContext (vm.js:295:6)
+          at processJavaScript (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:241:10)
+          at HTMLScriptElementImpl._innerEval (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:176:5)
+          at onLoadExternalScript (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:98:12)
+          at onLoadWrapped (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/per-document-resource-loader.js:53:33)
+          at Object.check (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:76:23)
+          at /Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:119:14
+          at processTicksAndRejections (internal/process/task_queues.js:95:5)
+
+      at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
+      at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:28)
+      at processJavaScript (node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:243:7)
+      at HTMLScriptElementImpl._innerEval (node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:176:5)
+      at onLoadExternalScript (node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:98:12)
+      at onLoadWrapped (node_modules/jsdom/lib/jsdom/browser/resources/per-document-resource-loader.js:53:33)
+      at Object.check (node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:76:23)
+
+ FAIL  alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex1-bookList.test.js (7.265 s)
+  ● Console
+
+    console.error
+      Error: Uncaught [TypeError: Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'.]
+          at reportException (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:62:24)
+          at processJavaScript (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:243:7)
+          at HTMLScriptElementImpl._innerEval (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:176:5)
+          at onLoadExternalScript (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:98:12)
+          at onLoadWrapped (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/per-document-resource-loader.js:53:33)
+          at Object.check (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:76:23)
+          at /Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:119:14
+          at processTicksAndRejections (internal/process/task_queues.js:95:5) TypeError: Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'.
+          at Object.<anonymous>.exports.convert (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/generated/Node.js:25:9)
+          at HTMLDivElement.appendChild (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/generated/Node.js:390:26)
+          at file:///Users/hackyourfuture/Desktop/Homework/alejandrourroz-w4/2-Browsers/Week1/homework/ex1-bookList/index.js:48:37
+          at Script.runInContext (vm.js:144:12)
+          at Object.runInContext (vm.js:295:6)
+          at processJavaScript (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:241:10)
+          at HTMLScriptElementImpl._innerEval (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:176:5)
+          at onLoadExternalScript (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:98:12)
+          at onLoadWrapped (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/per-document-resource-loader.js:53:33)
+          at Object.check (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:76:23)
+          at /Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:119:14
+          at processTicksAndRejections (internal/process/task_queues.js:95:5)
+
+      at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
+      at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:28)
+      at processJavaScript (node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:243:7)
+      at HTMLScriptElementImpl._innerEval (node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:176:5)
+      at onLoadExternalScript (node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:98:12)
+      at onLoadWrapped (node_modules/jsdom/lib/jsdom/browser/resources/per-document-resource-loader.js:53:33)
+      at Object.check (node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:76:23)
+
+  ● Generated HTML › should contain a <ul> that is a child of <div id="bookList">
+
+    expect(received).toBeTruthy()
+
+    Received: null
+
+      41 |   test('should contain a <ul> that is a child of <div id="bookList">', () => {
+      42 |     const ul = document.querySelector('div[id=bookList] > ul');
+    > 43 |     expect(ul).toBeTruthy();
+         |                ^
+      44 |   });
+      45 | 
+      46 |   test('should contain a <ul> with 3 <li> elements', () => {
+
+      at Object.<anonymous> (alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex1-bookList.test.js:43:16)
+
+  ● Generated HTML › should contain a <ul> with 3 <li> elements
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: 0
+
+      47 |     const nodeList = document.querySelectorAll('ul > li');
+      48 |     const result = nodeList ? nodeList.length : 0;
+    > 49 |     expect(result).toBe(3);
+         |                    ^
+      50 |   });
+      51 | 
+      52 |   test('should contain an <li> with title and author for each book of the `myBooks` array', () => {
+
+      at Object.<anonymous> (alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex1-bookList.test.js:49:20)
+
+  ● Generated HTML › should contain an <li> with title and author for each book of the `myBooks` array
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: StringContaining "The Design of Everyday Things"
+    Received: ""
+
+      58 |       : '';
+      59 |     state.titlesAndAuthors.forEach((string) =>
+    > 60 |       expect(result).toEqual(expect.stringContaining(string))
+         |                      ^
+      61 |     );
+      62 |   });
+      63 | 
+
+      at forEach (alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex1-bookList.test.js:60:22)
+          at Array.forEach (<anonymous>)
+      at Object.<anonymous> (alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex1-bookList.test.js:59:28)
+
+  ● Generated HTML › should contain an <img> element for each book
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: 0
+
+      65 |     const nodeList = document.querySelectorAll('li img');
+      66 |     const result = nodeList ? nodeList.length : 0;
+    > 67 |     expect(result).toBe(3);
+         |                    ^
+      68 |   });
+      69 | });
+      70 | 
+
+      at Object.<anonymous> (alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex1-bookList.test.js:67:20)
+
+Test Suites: 1 failed, 1 passed, 2 total
+Tests:       4 failed, 6 passed, 10 total
+Snapshots:   0 total
+Time:        10.579 s
+Ran all test suites matching /ex1-bookList.test.js/i.
+

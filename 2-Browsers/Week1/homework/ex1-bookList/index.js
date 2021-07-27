@@ -23,18 +23,22 @@ const myBooks = [
     title: 'The Design of Everyday Things',
     author: 'Don Norman',
     isbn: '978-0465050659',
+    image: "assets/the_design_of_everyday_things.jpg",
     alreadyRead: false,
+    
   },
   {
     title: 'The Most Human Human',
     author: 'Brian Christian',
     isbn: '978-1617933431',
+    image: "assets/the_design_of_everyday_things.jpg",
     alreadyRead: true,
   },
   {
     title: 'The Pragmatic Programmer',
     author: 'Andrew Hunt',
     isbn: '978-0201616224',
+    image: "assets/the_design_of_everyday_things.jpg",
     alreadyRead: true,
   },
 ];
@@ -43,17 +47,21 @@ function createBookList(books) {
   const newUl = document.createElement('ul');
  document.getElementById('bookList').appendChild(newUl);
  for (let i = 0; i < books.length; i++) {
+  const newLiEl = document.createElement('li');
+  const img = document.createElement('img');
+  img.alt = 'text';
+  img.src = books[i].image;
+  newLiEl.appendChild(img);
+  newUl.appendChild(newLiEl);
  const paragraph = document.createElement('p');
- const info = document.createTextNode(`${books[i].title}  ${books[i].author}`);
+ const info = document.createTextNode(`"${books[i].title}"  ${books[i].author}`);
  paragraph.appendChild(info);
  const attached=  document.getElementById('bookList')
  attached.appendChild(paragraph);
- const newLiEl = document.createElement('li');
-  
-
-
-
+ newLiEl.appendChild(paragraph);
+ if(books[i].alreadyRead) {newLiEl.style.backgroundColor = 'green'} else newLiEl.style.backgroundColor = 'red';
  }
+
 }
 
 
