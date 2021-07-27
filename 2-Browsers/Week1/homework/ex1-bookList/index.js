@@ -40,11 +40,24 @@ const myBooks = [
 ];
 
 function createBookList(books) {
-  const list = books.filter(book => book.title );
-  console.log(list)
+  const newUl = document.createElement('ul');
+ document.getElementById('bookList').appendChild(newUl);
+ for (let i = 0; i < books.length; i++) {
+ const paragraph = document.createElement('p');
+ const info = document.createTextNode(`${books[i].title}  ${books[i].author}`);
+ paragraph.appendChild(info);
+ const attached=  document.getElementById('bookList')
+ attached.appendChild(paragraph);
+ const newLiEl = document.createElement('li');
+  
+
+
+
+ }
 }
 
 
 const ulElement = createBookList(myBooks);
 
 document.querySelector('#bookList').appendChild(ulElement);
+
