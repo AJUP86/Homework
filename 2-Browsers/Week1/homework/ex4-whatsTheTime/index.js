@@ -5,8 +5,18 @@
   second). Use `setInterval()` to make sure the time stays current.
 2. Have the function execute when it's loading in the browser.
 ------------------------------------------------------------------------------*/
+
 function addCurrentTime() {
-  // TODO complete this function
+const now = new Date();
+const current = now.toLocaleTimeString();
+const clock = document.createElement('div');
+clock.className = 'myclock';
+document.body.appendChild(clock);
+const time = document.createTextNode(`${current}`);
+clock.appendChild(time);
+setTimeout(addCurrentTime,1000 )
 }
+
+addCurrentTime() ;
 
 // TODO execute `addCurrentTime` when the browser has completed loading the page

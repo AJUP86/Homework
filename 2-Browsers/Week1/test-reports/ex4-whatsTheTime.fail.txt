@@ -1,0 +1,78 @@
+*** Unit Test Error Report ***
+
+Command failed: npx jest ex4-whatsTheTime.test.js --colors
+ FAIL  alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex4-whatsTheTime.test.js (7.591 s)
+  ● whatsTheTime › should use `setInterval()`
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      42 | 
+      43 |   test('should use `setInterval()`', () => {
+    > 44 |     expect(state.setInterval).toBeDefined();
+         |                               ^
+      45 |   });
+      46 | 
+      47 |   test('should not call `setInterval()` more than once', async () => {
+
+      at Object.<anonymous> (alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex4-whatsTheTime.test.js:44:31)
+
+  ● whatsTheTime › should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      55 | 
+      56 |   test('should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event', () => {
+    > 57 |     expect(state.onload).toBeDefined();
+         |                          ^
+      58 |   });
+      59 | 
+      60 |   test('`window.onload` or `window.addEventListener` should not call its event handler function', () => {
+
+      at Object.<anonymous> (alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex4-whatsTheTime.test.js:57:26)
+
+ FAIL  2-Browsers/Week1/unit-tests/ex4-whatsTheTime.test.js (7.601 s)
+  ● whatsTheTime › should use `setInterval()`
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      42 | 
+      43 |   test('should use `setInterval()`', () => {
+    > 44 |     expect(state.setInterval).toBeDefined();
+         |                               ^
+      45 |   });
+      46 | 
+      47 |   test('should not call `setInterval()` more than once', async () => {
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex4-whatsTheTime.test.js:44:31)
+
+  ● whatsTheTime › should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      55 | 
+      56 |   test('should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event', () => {
+    > 57 |     expect(state.onload).toBeDefined();
+         |                          ^
+      58 |   });
+      59 | 
+      60 |   test('`window.onload` or `window.addEventListener` should not call its event handler function', () => {
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex4-whatsTheTime.test.js:57:26)
+
+Test Suites: 2 failed, 2 total
+Tests:       4 failed, 6 passed, 10 total
+Snapshots:   0 total
+Time:        10.598 s
+Ran all test suites matching /ex4-whatsTheTime.test.js/i.
+
+*** Spell Checker Report ***
+
+ex4-whatsTheTime/index.js:13:20 - Unknown word (myclock)
