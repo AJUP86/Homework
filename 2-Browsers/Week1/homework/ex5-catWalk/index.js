@@ -19,27 +19,24 @@
 
    https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif
 -----------------------------------------------------------------------------*/
-//Create a variable to store a reference to the `<img>` element.
+
 const cat = document.querySelector('img');
-//change Image style 
 cat.style.left = "0px";
 
-//start
 let startWalking = new Date().getTime();
+
 function catWalk() {
-//Complete the function called catWalk() to move the cat 10 pixels to the right
- // of where it started, by changing the `left` style property.
  cat.style.left = "10px";
  const catWalked = new Date().getTime();
  const time = ((catWalked-startWalking)/1000);
- const newPosition = time *50;
- cat.style.left = newPosition + "px";
+ const position = time *50;
+ cat.style.left = position + "px";
  window.requestAnimationFrame(catWalk);
 
- if (newPosition > window.innerWidth) {
+ if (position > window.innerWidth) {
    { startWalking = catWalked}
 } 
- if (newPosition > ((window.innerWidth - cat.width) / 3) && newPosition < ((window.innerWidth - cat.width)/3)+5) {
+ if (position > ((window.innerWidth - cat.width) / 3) && position < ((window.innerWidth - cat.width)/3)+5) {
    const timerId = setInterval(() => cat.src= "https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif", 2000);
    setTimeout(() => { clearInterval(timerId); cat.src="http://www.anniemation.com/clip_art/images/cat-walk.gif"; }, 7000);
 
