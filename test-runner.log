@@ -856,3 +856,171 @@ Ran all test suites matching /ex4-whatsTheTime.test.js/i.
 
 ex4-whatsTheTime/index.js:13:20 - Unknown word (myclock)
 
+2021-07-28 02:01:44 info: ---------------------------------------
+2021-07-28 02:01:44 info: >>> Running Unit Test `ex5-catWalk` <<<
+2021-07-28 02:01:44 info: ---------------------------------------
+2021-07-28 02:01:56 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-catWalk.test.js --colors
+ FAIL  alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex5-catWalk.test.js (5.049 s)
+  ● catWalk › should use `setInterval()` and/or `setTimeout()`
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      38 | 
+      39 |   test('should use `setInterval()` and/or `setTimeout()`', () => {
+    > 40 |     expect(state.timer).toBeDefined();
+         |                         ^
+      41 |   });
+      42 | 
+      43 |   test('should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event', () => {
+
+      at Object.<anonymous> (alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex5-catWalk.test.js:40:25)
+
+  ● catWalk › should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      42 | 
+      43 |   test('should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event', () => {
+    > 44 |     expect(state.onload).toBeDefined();
+         |                          ^
+      45 |   });
+      46 | 
+      47 |   test('`window.onload` or `window.addEventListener` should not call its event handler function', () => {
+
+      at Object.<anonymous> (alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex5-catWalk.test.js:44:26)
+
+ FAIL  2-Browsers/Week1/unit-tests/ex5-catWalk.test.js (5.052 s)
+  ● Console
+
+    console.error
+      Error: Uncaught [TypeError: window.requestAnimationFrame is not a function]
+          at reportException (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:62:24)
+          at processJavaScript (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:243:7)
+          at HTMLScriptElementImpl._innerEval (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:176:5)
+          at onLoadExternalScript (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:98:12)
+          at onLoadWrapped (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/per-document-resource-loader.js:53:33)
+          at Object.check (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:76:23)
+          at /Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:119:14
+          at processTicksAndRejections (internal/process/task_queues.js:95:5) TypeError: window.requestAnimationFrame is not a function
+          at catWalk (file:///Users/hackyourfuture/Desktop/Homework/2-Browsers/Week1/homework/ex5-catWalk/index.js:37:9)
+          at file:///Users/hackyourfuture/Desktop/Homework/2-Browsers/Week1/homework/ex5-catWalk/index.js:49:1
+          at Script.runInContext (vm.js:144:12)
+          at Object.runInContext (vm.js:295:6)
+          at processJavaScript (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:241:10)
+          at HTMLScriptElementImpl._innerEval (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:176:5)
+          at onLoadExternalScript (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:98:12)
+          at onLoadWrapped (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/per-document-resource-loader.js:53:33)
+          at Object.check (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:76:23)
+          at /Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:119:14
+
+      at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
+      at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:28)
+      at processJavaScript (node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:243:7)
+      at HTMLScriptElementImpl._innerEval (node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:176:5)
+      at onLoadExternalScript (node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:98:12)
+      at onLoadWrapped (node_modules/jsdom/lib/jsdom/browser/resources/per-document-resource-loader.js:53:33)
+      at Object.check (node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:76:23)
+
+  ● catWalk › should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      42 | 
+      43 |   test('should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event', () => {
+    > 44 |     expect(state.onload).toBeDefined();
+         |                          ^
+      45 |   });
+      46 | 
+      47 |   test('`window.onload` or `window.addEventListener` should not call its event handler function', () => {
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex5-catWalk.test.js:44:26)
+
+Test Suites: 2 failed, 2 total
+Tests:       3 failed, 5 passed, 8 total
+Snapshots:   0 total
+Time:        8.037 s
+Ran all test suites matching /ex5-catWalk.test.js/i.
+
+2021-07-28 02:01:57 error: *** ESLint Report ***
+
+ex5-catWalk/index.js
+  23:5  warning  'cat' is never reassigned. Use 'const' instead  no-autofix/prefer-const
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2021-07-28 02:04:21 info: ---------------------------------------
+2021-07-28 02:04:21 info: >>> Running Unit Test `ex5-catWalk` <<<
+2021-07-28 02:04:21 info: ---------------------------------------
+2021-07-28 02:04:28 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-catWalk.test.js --colors
+ PASS  2-Browsers/Week1/unit-tests/ex5-catWalk.test.js
+  ● Console
+
+    console.error
+      Error: Uncaught [HierarchyRequestError: Cannot set the body to null or a non-body/frameset element]
+          at reportException (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:62:24)
+          at processJavaScript (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:243:7)
+          at HTMLScriptElementImpl._innerEval (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:176:5)
+          at onLoadExternalScript (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:98:12)
+          at onLoadWrapped (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/per-document-resource-loader.js:53:33)
+          at Object.check (/Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:76:23)
+          at /Users/hackyourfuture/Desktop/Homework/node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:119:14
+          at processTicksAndRejections (internal/process/task_queues.js:95:5) DOMException {}
+
+      at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
+      at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:28)
+      at processJavaScript (node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:243:7)
+      at HTMLScriptElementImpl._innerEval (node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:176:5)
+      at onLoadExternalScript (node_modules/jsdom/lib/jsdom/living/nodes/HTMLScriptElement-impl.js:98:12)
+      at onLoadWrapped (node_modules/jsdom/lib/jsdom/browser/resources/per-document-resource-loader.js:53:33)
+      at Object.check (node_modules/jsdom/lib/jsdom/browser/resources/resource-queue.js:76:23)
+
+ FAIL  alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex5-catWalk.test.js
+  ● catWalk › should use `setInterval()` and/or `setTimeout()`
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      38 | 
+      39 |   test('should use `setInterval()` and/or `setTimeout()`', () => {
+    > 40 |     expect(state.timer).toBeDefined();
+         |                         ^
+      41 |   });
+      42 | 
+      43 |   test('should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event', () => {
+
+      at Object.<anonymous> (alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex5-catWalk.test.js:40:25)
+
+  ● catWalk › should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      42 | 
+      43 |   test('should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event', () => {
+    > 44 |     expect(state.onload).toBeDefined();
+         |                          ^
+      45 |   });
+      46 | 
+      47 |   test('`window.onload` or `window.addEventListener` should not call its event handler function', () => {
+
+      at Object.<anonymous> (alejandrourroz-w4/2-Browsers/Week1/unit-tests/ex5-catWalk.test.js:44:26)
+
+Test Suites: 1 failed, 1 passed, 2 total
+Tests:       2 failed, 6 passed, 8 total
+Snapshots:   0 total
+Time:        5.513 s, estimated 6 s
+Ran all test suites matching /ex5-catWalk.test.js/i.
+
