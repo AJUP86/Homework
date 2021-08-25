@@ -12,10 +12,10 @@ Why pay a fortune teller when you can just program your fortune yourself?
 3. Complete the function named `tellFortune` as follows:
 
    - It should take four arguments (in the order listed): 
-     * number of children (`number`), 
-     * partner's name (`string`), 
-     * geographic location (`string`) and 
-     * job title (`string`).
+     * the array with the options for the number of children, 
+     * the array with the options for the partner's name, 
+     * the array with the options for the geographic location and 
+     * the array with the options for the job title.
    - It should use the `selectRandomly` function to randomly select values from 
      the arrays.
    - It should return a string: "You will be a `jobTitle` in `location`, 
@@ -24,7 +24,7 @@ Why pay a fortune teller when you can just program your fortune yourself?
 4. Call the function three times, passing the arrays as arguments. Use `
    console.log` to display the results.
 
-Note: The DRY is put into practice here: instead of repeating the code to 
+Note: The DRY principle is put into practice here: instead of repeating the code to 
 randomly select array elements four times inside the `tellFortune` function 
 body, this code is now written once only in a separated function.
 -----------------------------------------------------------------------------*/
