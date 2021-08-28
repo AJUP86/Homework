@@ -51,3 +51,8 @@ Snapshots:   0 total
 Time:        2.092 s
 Ran all test suites matching /ex2-mondaysWorth.test.js/i.
 
+2021-08-28 04:20:09 info: ---------------------------------------
+2021-08-28 04:20:09 info: >>> Running Unit Test `ex1-johnWho` <<<
+2021-08-28 04:20:09 info: ---------------------------------------
+2021-08-28 04:20:16 info: All unit tests passed.
+2021-08-28 04:20:18 info: All steps were completed successfully
