@@ -56,3 +56,8 @@ Ran all test suites matching /ex2-mondaysWorth.test.js/i.
 2021-08-28 04:20:09 info: ---------------------------------------
 2021-08-28 04:20:16 info: All unit tests passed.
 2021-08-28 04:20:18 info: All steps were completed successfully
+2021-08-28 04:32:22 info: -------------------------------------------------
+2021-08-28 04:32:22 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2021-08-28 04:32:22 info: -------------------------------------------------
+2021-08-28 04:32:26 info: All unit tests passed.
+2021-08-28 04:32:28 info: All steps were completed successfully
