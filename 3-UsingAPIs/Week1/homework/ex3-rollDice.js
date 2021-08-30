@@ -1,5 +1,4 @@
 'use strict';
-
 /*------------------------------------------------------------------------------
 - Run the unmodified program and confirm that problem described occurs.
 - Refactor the `rollDice()` function from callback-based to returning a
@@ -26,7 +25,6 @@ const rollDice = () => {
       if (roll > 6) {
         // TODO replace "error" callback
         reject(new Error('Oops... Dice rolled off the table.'));
-        return;
       }
 
       // Use callback to communicate the final dice value once finished rolling
@@ -39,7 +37,6 @@ const rollDice = () => {
       // Schedule the next roll todo until no more rolls to do
       if (roll < randomRollsToDo) {
         setTimeout(() => rollOnce(roll + 1), 500);
-        return;
       }
     };
 
@@ -49,19 +46,12 @@ const rollDice = () => {
 };
 
 // TODO Refactor to use promise
-/*rollDice((error, value) => {
-  if (error !== null) {
-    console.log(error.message);
-  } else {
-    console.log(`Success! Dice settled on ${value}.`);
-  }
-});*/
 rollDice()
-  .catch((error) => {
-    console.log(error.message);
-  })
   .then((message) => {
     console.log(`Success! Dice settled on ${message}.`);
+  })
+  .catch((error) => {
+    console.log(error);
   });
 
 // ! Do not change or remove the code below
