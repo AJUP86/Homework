@@ -54,5 +54,12 @@ rollDice()
     console.log(error);
   });
 
+function wasteTimeBlocking() {
+  for (let count = 1; count <= 1000; count++) {
+    console.log('  count =', count);
+  }
+}
+wasteTimeBlocking();
+
 // ! Do not change or remove the code below
 module.exports = rollDice;
