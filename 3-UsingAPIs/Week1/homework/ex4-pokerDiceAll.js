@@ -6,7 +6,7 @@ For this exercise you should do the following:
       Resolved! [ 'JACK', 'QUEEN', 'QUEEN', 'NINE', 'JACK' ]
   - An unsuccessful (i.e. rejected) throw should output a message similar to:
       Rejected! Dice 3 rolled off the table.
-
+ 
 The provided rollDice() function logs the value of a dice as it rolls, 
 time-stamped with the time of day (with millisecond accuracy) to the console. 
 Once you have successfully completed this exercise you will notice that the 
