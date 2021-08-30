@@ -61,3 +61,50 @@ Ran all test suites matching /ex2-mondaysWorth.test.js/i.
 2021-08-28 04:32:22 info: -------------------------------------------------
 2021-08-28 04:32:26 info: All unit tests passed.
 2021-08-28 04:32:28 info: All steps were completed successfully
+2021-08-30 01:26:04 info: ----------------------------------------
+2021-08-30 01:26:04 info: >>> Running Unit Test `ex3-rollDice` <<<
+2021-08-30 01:26:04 info: ----------------------------------------
+2021-08-30 01:26:09 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollDice.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex3-rollDice.test.js
+  rollDice
+    ✓ should call `new Promise()` (2 ms)
+    ✕ `resolve()` should be called with a one argument (3 ms)
+    ✓ `reject()` should be called with a one argument
+    ✓ should resolve when the dice settles successfully (2 ms)
+    ✓ should reject with an Error when the dice rolls off the table (1 ms)
+
+  ● rollDice › `resolve()` should be called with a one argument
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 2
+
+      35 | 
+      36 |   test('`resolve()` should be called with a one argument', () => {
+    > 37 |     expect(state.resolve).toBe(1);
+         |                           ^
+      38 |   });
+      39 | 
+      40 |   test('`reject()` should be called with a one argument', () => {
+
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex3-rollDice.test.js:37:27)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        2.085 s
+Ran all test suites matching /ex3-rollDice.test.js/i.
+
+2021-08-30 01:26:54 info: ----------------------------------------
+2021-08-30 01:26:54 info: >>> Running Unit Test `ex3-rollDice` <<<
+2021-08-30 01:26:54 info: ----------------------------------------
+2021-08-30 01:26:57 info: All unit tests passed.
+2021-08-30 01:26:58 info: All steps were completed successfully
+2021-08-30 01:32:37 info: ----------------------------------------
+2021-08-30 01:32:37 info: >>> Running Unit Test `ex3-rollDice` <<<
+2021-08-30 01:32:37 info: ----------------------------------------
+2021-08-30 01:32:40 info: All unit tests passed.
+2021-08-30 01:32:41 info: All steps were completed successfully
