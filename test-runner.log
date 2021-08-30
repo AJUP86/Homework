@@ -155,3 +155,8 @@ Ran all test suites matching /ex3-rollDice.test.js/i.
 2021-08-30 10:31:28 info: ----------------------------------------
 2021-08-30 10:31:31 info: All unit tests passed.
 2021-08-30 10:31:33 info: All steps were completed successfully
+2021-08-30 11:34:10 info: --------------------------------------------
+2021-08-30 11:34:10 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2021-08-30 11:34:10 info: --------------------------------------------
+2021-08-30 11:34:16 info: All unit tests passed.
+2021-08-30 11:34:18 info: All steps were completed successfully
