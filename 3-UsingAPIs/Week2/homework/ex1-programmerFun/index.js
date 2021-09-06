@@ -47,12 +47,12 @@ function renderError(error) {
 
 // TODO refactor with async/await and try/catch
 async function main() {
-  await requestData('https://xkcd.now.sh/?comic=latest')
-    .then((data) => {
-      renderImage(data);
-    })
-    .catch((error) => {
-      renderError(error);
-    });
+  try {
+    await requestData('https://xkcd.now.sh/?comic=latest');
+    renderImage();
+    throw new Error('No image found');
+  } catch (error) {
+    renderError(error.message);
+  }
 }
 window.addEventListener('load', main);
