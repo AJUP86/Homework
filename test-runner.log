@@ -165,3 +165,19 @@ Ran all test suites matching /ex3-rollDice.test.js/i.
 2021-08-30 11:54:42 info: ----------------------------------------------
 2021-08-30 11:54:48 info: All unit tests passed.
 2021-08-30 11:54:50 info: All steps were completed successfully
+2021-09-05 11:58:38 info: ---------------------------------------------
+2021-09-05 11:58:38 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2021-09-05 11:58:38 info: ---------------------------------------------
+2021-09-05 11:58:46 error: *** Unit Test Error Report ***
+
+  console.log
+    [Function (anonymous)]
+
+      at VirtualConsole.onMethodCall (node_modules/jsdom/lib/jsdom/virtual-console.js:22:29)
+
+
+2021-09-06 11:00:14 info: ---------------------------------------------
+2021-09-06 11:00:14 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2021-09-06 11:00:14 info: ---------------------------------------------
+2021-09-06 11:00:21 info: All unit tests passed.
+2021-09-06 11:00:23 info: All steps were completed successfully

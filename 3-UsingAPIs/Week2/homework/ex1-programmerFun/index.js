@@ -15,23 +15,39 @@
    url with `.shx`. There is no server at the modified url, therefore this 
    should result in a network (DNS) error.
 ------------------------------------------------------------------------------*/
-function requestData(url) {
+async function requestData(url) {
   // TODO return a promise using `fetch()`
+  try {
+    const response = await fetch(url);
+    console.log(response);
+    if (response.ok) {
+      return response.json();
+    }
+    throw new Error(response.status);
+  } catch (error) {
+    console.log(error.message);
+  }
 }
 
 function renderImage(data) {
   // TODO render the image to the DOM
-  console.log(data);
+  const image = document.createElement('img');
+  const imageUrl = data.img;
+  image.setAttribute('src', `${imageUrl}`);
+  document.body.appendChild(image);
 }
 
 function renderError(error) {
   // TODO render the error to the DOM
+  const renderedError = document.createElement('h1');
+  renderedError.textContent = 'No image to render';
+  document.body.appendChild(renderedError);
   console.log(error);
 }
 
 // TODO refactor with async/await and try/catch
-function main() {
-  requestData('https://xkcd.now.sh/?comic=latest')
+async function main() {
+  await requestData('https://xkcd.now.sh/?comic=latest')
     .then((data) => {
       renderImage(data);
     })
@@ -39,5 +55,4 @@ function main() {
       renderError(error);
     });
 }
-
 window.addEventListener('load', main);
