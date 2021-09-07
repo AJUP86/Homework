@@ -207,3 +207,8 @@ Ran all test suites matching /ex3-rollDice.test.js/i.
       at VirtualConsole.onMethodCall (node_modules/jsdom/lib/jsdom/virtual-console.js:22:29)
 
 
+2021-09-07 09:54:52 info: -----------------------------------------
+2021-09-07 09:54:52 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2021-09-07 09:54:52 info: -----------------------------------------
+2021-09-07 09:54:56 info: All unit tests passed.
+2021-09-07 09:54:58 info: All steps were completed successfully
