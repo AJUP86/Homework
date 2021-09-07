@@ -1,0 +1,17 @@
+*** Unit Test Error Report ***
+
+  console.log
+    fetch is not defined
+
+      at VirtualConsole.onMethodCall (node_modules/jsdom/lib/jsdom/virtual-console.js:22:29)
+
+  console.log
+    fetch is not defined
+
+      at VirtualConsole.onMethodCall (node_modules/jsdom/lib/jsdom/virtual-console.js:22:29)
+
+  console.log
+    No data has been found
+
+      at VirtualConsole.onMethodCall (node_modules/jsdom/lib/jsdom/virtual-console.js:22:29)
+
