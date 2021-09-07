@@ -101,6 +101,9 @@ async function main() {
     await fetchData('https://pokeapi.co/api/v2/pokemon?limit=151&offset=0');
     await fetchAndPopulatePokemons(fetchData);
     document.body.style.display = 'flex';
+    document.body.style.height = '100vh';
+    document.body.style.alignItems = 'center';
+    document.body.style.justifyContent = 'center';
     document.body.style.flexDirection = 'column-reverse';
   } catch (error) {
     console.log('No data has been found');
