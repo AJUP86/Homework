@@ -31,6 +31,6 @@ async function main() {
 }
 
 main();
-
+//The remaning dices remains rolling thill the end because no error occurs while all dices are rolling so they will finish the operation.
 // ! Do not change or remove the code below
 module.exports = rollTheDices;
