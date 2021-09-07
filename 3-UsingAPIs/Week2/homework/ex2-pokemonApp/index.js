@@ -87,7 +87,7 @@ async function fetchImage(url) {
   const pokemonImage = await fetchData(url);
   const image = pokemonImage.sprites.front_default;
 
-  //append image to the body
+  //inserting image to DOM element
 
   onePokemonImage.setAttribute('src', `${image}`);
 }
